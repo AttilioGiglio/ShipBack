@@ -59,8 +59,10 @@ class Change extends Component {
                 <div class="pb-3"></div>
             <Link className="navbar-brand" to="/cambioDevolucion">   <a href="petitions_2" type="button" class="btn btn-primary mr-1">Anterior</a>
                 <a href="#" type="button" class="btn btn-primary">Siguiente</a>
-
                 </Link>
+                <a href="petitions_2" type="button" class="btn btn-primary mr-1">Anterior</a>
+                <a href="#" type="button" class="btn btn-primary">Siguiente</a>
+
             </form>            
         );
     }
