@@ -6,7 +6,7 @@ import { Context } from "../store/AppContext";
 
 
 
-const Registrarse = () => {
+const Registrarse = (props) => {
     const { store, actions } = useContext(Context);
 
     const[state, setState] = useState({

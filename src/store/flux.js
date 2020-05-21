@@ -37,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           setStore({
             allUsers : user
           })
-          localStorage.setItem("user",JSPON.stringify(user))
+          localStorage.setItem("user",JSON.stringify(user))
         }
       },
 
@@ -49,7 +49,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             allUsers: user
           });
         }
-      } 
+      },
 
 
 
