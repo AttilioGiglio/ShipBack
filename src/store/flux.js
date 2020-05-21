@@ -10,25 +10,48 @@ const getState = ({ getStore, getActions, setStore }) => {
             lastname:"",
             email:"",
             password:"",
-            nameCompany:"",
-            direction:"",
-            city:"",
-            phone:"",
-            idUsuario:0,
+            idUsuario:null,
             allUsers:{},
             // variables del producto
             pedidos:[],
-            productos:{},
-            nombreProducto:"",
-            precioProducto:0,
-            idProducto:0,
-            descripcionProducto:"",
+            numeroPedido:null,
+            idPedido:null,
+            descripcionPedido:{},
+            productos:{}
           
 
 
 
     },
     actions: {
+
+      login: async(params) => {
+        console.log(params)
+        if(params!==undefined && params.name!== "" && params.lastname!=="" && params.password!==""){
+          const user = {
+          name : params.name,
+          lastname: params.lastname,
+          email : params.email,
+          password : params.password
+          }
+          setStore({
+            allUsers : user
+          })
+          localStorage.setItem("user",JSPON.stringify(user))
+        }
+      },
+
+
+
+      revalidateUser: (user) => {
+        if (user !== undefined) {
+          setStore({
+            allUsers: user
+          });
+        }
+      } 
+
+
 
       createUser: (history) => {
         const store= getStore();
@@ -37,11 +60,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           lastname: store.lastname,
           email: store.email,
           password: store.password,
-          nameCompany: store.nameCompany,
-          direction : store.direction,
-          city: store.city,
-          phone: store.phone,
-          idUsuario: store.idUsuario
         }
 
         fetch(store.path + "/api/registrarse",{
@@ -108,11 +126,11 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
 
-      editarProducto: (history) => {
+      editarPedido: (history) => {
         const store = getStore();
         const data = {
-          nombreProducto : store.nombreProducto,
-          precioProducto : store.precioProducto,
+          numeroPedido : store.nombreProducto,
+          idPedido : store.precioProducto,
           descripcionProducto : store.descripcionProducto
 
         }
@@ -141,27 +159,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-      
-
-
-
-      
-      handleChange: e => {
-        setStore({
-          [e.target.name]: e.target.value,
-          [e.target.lastname]: e.target.value,
-          [e.target.email]: e.target.value,
-          [e.target.password]: e.target.value,
-          [e.target.nameCompany]: e.target.value,
-          [e.target.direction]: e.target.value,
-          [e.target.city]: e.target.value,
-          [e.target.phone]: e.target.value
-        })
-      }
-
-
+    }
+  }
 }
-}}
-
-
 export default getState;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import {Link} from "react-router-dom"
 
 class NavBar extends Component {
         render() {
@@ -17,6 +17,13 @@ class NavBar extends Component {
                                     Ordenes <span className="sr-only">(current)</span>
                                 </a>
                             </li>
+
+                          <Link className="navbar-brand" to="/first_step"><li className="nav-item active">
+                                <a className="nav-link" href="#">
+                                    Cambio/Devolucion
+                                </a>
+                            </li>
+                            </Link>
                             <li className="nav-item active">
                                 <a className="nav-link" href="#">
                                     Tracking

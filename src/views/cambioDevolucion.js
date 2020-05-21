@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import { Link } from "react-router-dom";
 
-import { Context } from "../store/appContext";
+import { Context } from "../store/AppContext";
 
 
 
@@ -72,10 +72,17 @@ const CambioDevolucion = () => {
 
             <div className="row">
                 <div className="col">
-                  <button type="button" class="btn btn-primary btn-lg btn-block">Cambio</button>
+                <Link className="navbar-brand" to="/change"><button type="button" class="btn btn-primary btn-lg btn-block">
+                  Cambio
+                  </button>
+                  </Link>
                 </div>
                 <div className="col">
-                  <button type="button" class="btn btn-primary btn-lg btn-block">Devolucion</button>
+              <Link className="navbar-brand" to="/return"><button type="button" class="btn btn-primary btn-lg btn-block">
+              Devolucion
+              </button>
+              </Link>
+             
                 </div>
               </div>
             </h4>

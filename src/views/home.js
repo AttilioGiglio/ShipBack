@@ -1,198 +1,139 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
+import React from "react";
+import {Link} from "react-router-dom";
+
 
 const Home = () => {
-    const { store } = useContext(Context);
+
+
     return (
+        <>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <li>
+                    <a class="navbar-brand" href="#">ShipBack</a>
+                  
+                   </li>
 
-        <div className="container">
-            <div className="row ">
-                <div className="col-12">
-                    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <div className="container ">
-                            <a className="navbar-brand" href="#">
-                                <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top " alt="" />
-                                <h2>ShipBack</h2>
-                            </a>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">¿Como funcionamos?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">¿Que hacemos?</a>
+                        </li>
+                    <Link className="navbar-brand" to="/registrarse"><li class="nav-item">
+                            <a class="nav-link" href="#">Sign In</a>
+                        </li>
+                        </Link>
+                        <Link className="navbar-brand" to="login"><li class="nav-item">
+                    <a class="nav-link" href="#">Log In</a>
+                        </li>
+                        </Link>
+                    </ul>
 
+                </div>
+            </nav>
 
-                            <ul className="nav nav-pills justify-content-end">
+            <div class="jumbotron text-center">
+                <h1 class="display-4">ShipBack</h1>
+                <img src="...." width="150px"/>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Chatea con Nosotros</a>
+            </div>
 
-
-                                <li className="nav-item">
-
-                                    <a className="nav-link text-white" href="#Clientes">Clientes</a>
-                                </li>
-
-                                <li className="nav-item">
-                                    <a className="nav-link text-white" href="#">¿Como Funcionamos?<span className="sr-only">(current)</span></a>
-                                </li>
-
-                                <li className="nav-item active" href="#">
-                                    <a className="nav-link text-white" href="#">¿Que hacemos?</a>
-                                </li>
-
-
-
-
-                                <Link className="navbar-brand" to="/cambioDevolucion">  <li className="nav-item active" href="#">
-                                    <a className="nav-link text-white" href="#">Cambio o Devolucion</a>
-                                </li>
-                                </Link>
-                                <div className="row">
-                                    <div className="col">
-                                        <Link className="navbar-brand" to="/login">  <li className="nav-item active" href="#">
-                                            <a className="nav-link text-white" href="#">Iniciar Sesion</a>
-                                        </li>
-                                        </Link>
-
-                                    </div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col">
-                                        <Link className="navbar-brand" to="/registrarse"><li className="nav-item active" href="#">
-                                            <a className="nav-link text-white" href="#">Registrarse</a>
-                                        </li>
-                                        </Link>
-                                    </div>
-                                </div>
-
-                            </ul>
-                        </div>
-
-
-                    </nav>
-
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">¿Que Hacemos?</h1>
+                    <h3>Estandarizamos tus devoluciones</h3>
+                    <p class="lead">Integramos nuestra plataforma en tu e-commerce y en minutos tendrás la solución para automatizar los flujos de postventa, pudiendo gestionarlos
+                     desde un panel de administración amigable y con reportería en tiempo real.</p>
                 </div>
             </div>
 
-            <div className="row mt mb-5">
-                <div className="col-12">
-
-                    <div className="card bg-dark text-black">
-                        <img src="https://via.placeholder.com/500x325" class="card-img" alt="..." />
-                        <div className="card-img-overlay">
-                            <div className="row mt-5 mb-5">
-                                <div className="col-12">
-                                    <h5 className="card-title text-center">XXXXXXXXXXXXXXXXXX</h5>
-                                </div>
-                            </div>
-                            <div className="row mt-5 mb-5">
-                                <div className="col-12">
-                                    <p className="card-text text-center">This is a wider card with supporting text below as a natural lead-in
-                             to additional content. This content is a little bit longer.</p>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-12 mt-5 mb-5">
-                                    <p className="card-text text-center">Last updated 3 mins ago</p>
-                                </div>
-                            </div>
-
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="boton text-center mt-5">
-                                        <button type="button" class="btn btn-lg btn-primary">Pruebalo Gratis</button>
-                                    </div>
-                                </div>
+            <div class="jumbotron jumbotron-fluid mb-0">
+                <div class="container">
+                    <h1 class="display-4 text-center mb-5">¿Como funcionaria para mi Cliente?</h1>
+                    <div className="row">
+                        <div className="col-4">
+                            <img class="card-img-top" src="http://placehold.it/250x250" class="rounded-circle" alt="Card image cap" />
+                            <div class="card-body">
+                                <h2 class="card-title">Paso 1</h2>
+                                <p class="card-text">En pocos clicks, tu cliente solicita un cambio o devolución.</p>
+                               
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
 
-
-
-
-
-            <div className="row">
-                <div className="col-12">
-
-                    <div className="card pl-4">
-                        <div className="card-title mt-5">
-                            <h2 className="title">
-                                ¿Que hacemos?
-                              </h2>
-                            <h3 className="pre-title">
-                                Estandarizamos tus devoluciones
-                                     </h3>
-                            <div className="card-body">
-                                <p className="lead">
-                                    Integramos nuestra plataforma en tu e-commerce y en minutos tendrás la solución para automatizar los flujos de postventa,
-                                     pudiendo gestionarlos desde un panel de administración amigable y con reportería en tiempo real.
-                                 </p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                </div>
-            </div>
-
-            <div className="row mt-5">
-                <div className="col-12">
-                    <div className="card">
-                        <div className="card-title text-center mt-5">
-                            <h1 className="title">
-                                ¿Como funcionaria para mi cliente?
-                </h1>
-                        </div>
-                        <div className="card-body">
-                            <div class="card-deck">
-                                <div class="card">
-                                    <img class="card-img-top" src="http://placehold.it/250x250" class="rounded-circle" alt="Card image cap" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img class="card-img-top" src="http://placehold.it/250x250" class="rounded-circle" alt="Card image cap" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img class="card-img-top" src="http://placehold.it/250x250" class="rounded-circle" alt="Card image cap" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div className="footer">
-                <div className="py-5 bg-dark">
-                    <div className="container">
-                        <p className="m-0 text-center text-white"> Copyright © Your Website 2019</p>
-                    </div>
-
-                </div>
-        </div>
-        </div>
-
-
-
-
-            )
-        }
+                        <div className="col-4">
+                            <img class="card-img-top" src="http://placehold.it/250x250" class="rounded-circle" alt="Card image cap" />
+                            <div class="card-body">
+                                <h2 class="card-title">Paso 2</h2>
+                                <p class="card-text">Recibes la confirmación y apruebas el caso.</p>
         
+                            </div>
+                        </div>
+                        <div className="col-4">
+                            <img class="card-img-top" src="http://placehold.it/250x250" class="rounded-circle" alt="Card image cap" />
+                            <div class="card-body">
+                                <h2 class="card-title">Paso 3</h2>
+                                <p class="card-text">ShipBack realiza el cambio en la puerta de tu cliente en menos de 24 horas.</p>
+                           
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            
+            <div className="footer">
+                <div className="py-3 bg-dark">
+                    <div className="container">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Habla con Nosotros!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">¿Como funcionamos?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">¿Que hacemos?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Log In</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">ShipBack</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <img src="shipback.svg" width="60px"/>
+                        </li>
+                    </ul>
+
+                    </div>
+
+                </div>
+                </div>
+
+        </>
+    )
+
+
+}
+
 export default Home;
