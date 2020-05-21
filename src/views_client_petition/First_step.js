@@ -14,6 +14,7 @@ class AskedNumber extends Component {
                 <div class="pb-3"></div>
                 <a href="http://web.whatsapp.com" type="button" class="btn btn-success"><i class="fa fa-whatsapp"></i> ¡Contáctanos por What's App!</a>
                 <div class="pb-3"></div>
+                <a href="CambioDevolucion" type="button" class="btn btn-primary">Siguiente</a>
                 <a href="petitions_2" type="button" class="btn btn-primary">Siguiente</a>
             </form>
         );

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom"
+
 
 class Change extends Component {
     render() {
@@ -55,8 +57,12 @@ class Change extends Component {
                 <div class="pb-3"></div>
                 <a href="http://web.whatsapp.com" type="button" class="btn btn-success"><i class="fa fa-whatsapp"></i> ¡Contáctanos por What's App!</a>
                 <div class="pb-3"></div>
+            <Link className="navbar-brand" to="/cambioDevolucion">   <a href="petitions_2" type="button" class="btn btn-primary mr-1">Anterior</a>
+                <a href="#" type="button" class="btn btn-primary">Siguiente</a>
+                </Link>
                 <a href="petitions_2" type="button" class="btn btn-primary mr-1">Anterior</a>
                 <a href="#" type="button" class="btn btn-primary">Siguiente</a>
+
             </form>            
         );
     }
