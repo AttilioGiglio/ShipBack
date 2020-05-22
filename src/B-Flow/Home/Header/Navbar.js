@@ -18,7 +18,7 @@ class NavBar extends Component {
                                 </a>
                             </li>
 
-                          <Link className="navbar-brand" to="/first_step"><li className="nav-item active">
+                          <Link className="navbar-brand" to="/petitions_1"><li className="nav-item active">
                                 <a className="nav-link" href="#">
                                     Cambio/Devolucion
                                 </a>

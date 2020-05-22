@@ -5,7 +5,44 @@ import {Link} from "react-router-dom"
 class Return extends Component {
     render() {
         return (
-            <form>
+            <div>
+            
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                    <div className="row  col-md-3 offset-sm-1">
+                        <a className="navbar-brand" href="#">
+                            S H I P B A C K
+                        </a>
+                    </div>
+                    <div className="row  col-sm-2 offset-sm-5">
+                        <ul className="navbar-nav pl-5">
+                            <li className="nav-item active">
+                                <a className="nav-link offset-sm-5" href="#">
+                                    Account
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="pt-5"></div>
+                <div class="pt-5"></div>
+            <div class="container-lg mx-auto pr-3 mr-3 mt-3">
+                <button type="button" class="btn btn-light ml-5">1</button>
+                <span class="badge badge-pill pr-0 pl-0">———————</span>
+                <button type="button" class="btn btn-light">2</button>
+                <span class="badge badge-pill pr-0 pl-0">———————</span>
+                <button type="button" class="btn btn-dark">3</button>
+                <span class="badge badge-pill pr-0 pl-0">———————</span>
+                <button type="button" class="btn btn-light">4</button>
+                <span class="badge badge-pill pr-0 pl-0">———————</span>
+                <button type="button" class="btn btn-light">5</button>
+            </div>
+
+            
+   
+            <form class="container-md">
+                <div class="pb-3"></div>
+                <legend class="col-form-label font-weight-bold">Devolución de producto</legend>
+                <legend class="col-form-label">Ingrese sus datos de cuenta para efectuar la transacción.</legend>
                 <div class="pb-3"></div>
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect" />Banco
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
@@ -51,16 +88,12 @@ class Return extends Component {
                 <input type="text" class="form-control" id="formGroupExampleInput"></input>
 
                 <div class="pb-3"></div>
-                <a href="http://web.whatsapp.com" type="button" class="btn btn-success"><i class="fa fa-whatsapp"></i> ¡Contáctanos por What's App!</a>
+                <a href="https://api.whatsapp.com/send?phone=+56993232898&text=&source=&data=&app_absent=" type="button" class="btn btn-success"><i class="fa fa-whatsapp"></i> ¡Contáctanos por What's App!</a>
                 <div class="pb-3"></div>
-
-            <Link className="navbar-brand" to="/cambioDevolucion"><a href="petitions_2" type="button" class="btn btn-primary mr-1">Anterior</a>
-            </Link>
-
-                <a href="petitions_2" type="button" class="btn btn-primary mr-1">Anterior</a>
-
-                <a href="#" type="button" class="btn btn-primary">Siguiente</a>
-            </form>            
+                <a href="petitions_2" type="button" class="btn btn-secondary mr-1">Anterior</a>
+                <a href="petitions_5" type="button" class="btn btn-dark">Siguiente</a>
+            </form>
+            </div>
         );
     }
 }
