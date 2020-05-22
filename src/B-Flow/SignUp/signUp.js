@@ -1,39 +1,51 @@
-import React, { useContext, useState } from "react";
+import React, { useCallback } from "react";
+// import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../store/AppContext";
+// import { Context } from "../../store/AppContext.js";
+import { withRouter } from "react-router";
+import FireBase from "../../FireBase/fireBase.js"
 
+    const SignUp = ({ history }) => {
+        const handleSignUp = useCallback(async event => {
+          event.preventDefault();
+          const { email, password } = event.target.elements;
+          try {
+            await FireBase
+              .auth()
+              .createUserWithEmailAndPassword(email.value, password.value);
+            history.push("/login");
+          } catch (error) {
+            alert(error);
+          }
+        }, [history]);
 
+//     const { store, actions } = useContext(Context);
 
+//     const[state, setState] = useState({
 
-
-const Registrarse = (props) => {
-    const { store, actions } = useContext(Context);
-
-    const[state, setState] = useState({
-
-        name:"",
-        lastname:"",
-        email:"",
-        password:""
+//         name:"",
+//         lastname:"",
+//         email:"",
+//         password:""
         
-    })
+//     })
 
 
-    const handleSumbit = async (e) => {
-        e.preventDefault();
-        const response = await actions.login(state);
-        if(response.status){
-            props.history.push("/registrarse")
-        }
-    }
+//     const handleSumbit = async (e) => {
+//         e.preventDefault();
+//         const response = await actions.login(state);
+//         if(response.status){
+//             props.history.push("/registrarse")
+//         }
+//     }
     
-    const handleChange = (e) => {
+//     const handleChange = (e) => {
    
-        setState({
-            ...state,
-            [e.target.name] : e.target.value
-        })
-    }
+//         setState({
+//             ...state,
+//             [e.target.name] : e.target.value
+//         })
+//     }
 
 
     return (
@@ -49,7 +61,8 @@ const Registrarse = (props) => {
                         </div>
                         <div className="card-body">
                             <form 
-                                onSubmit={handleSumbit}
+                                // onSubmit={handleSumbit}
+                                onSubmit={handleSignUp}
                             >
 
                                 <div className="row justify-content-center">
@@ -57,7 +70,7 @@ const Registrarse = (props) => {
                                         <input type="text"
                                             placeholder="Ingresa tu Nombre"
                                             name="name"
-                                            onChange={handleChange}
+                                            // onChange={handleChange}
                                             class="form-control" />
                                     </div>
                                 </div>
@@ -68,7 +81,7 @@ const Registrarse = (props) => {
                                         <input type="text"
                                             placeholder="Ingresa tu Apellido"
                                             name="lastname"
-                                            onChange={handleChange}
+                                            // onChange={handleChange}
                                             class="form-control" />
                                     </div>
                                 </div>
@@ -79,7 +92,7 @@ const Registrarse = (props) => {
                                         <input type="email"
                                             placeholder="Ingresa tu Email"
                                             name="email"
-                                            onChange={handleChange}
+                                            // onChange={handleChange}
                                             class="form-control" />
                                     </div>
                                 </div>
@@ -93,7 +106,7 @@ const Registrarse = (props) => {
                                             minLength="4" 
                                             required
                                             name="password"
-                                            onChange={handleChange}
+                                            // onChange={handleChange}
                                             class="form-control" />
                                     </div>
                                 </div>
@@ -117,4 +130,4 @@ const Registrarse = (props) => {
     )
 }
 
-export default Registrarse;
+export default withRouter(SignUp);
