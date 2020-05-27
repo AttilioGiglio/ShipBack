@@ -4,15 +4,15 @@ import injectContext from "./store/AppContext";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from "./views/home";
 import SignUp from './B-Flow/SignUp/signUp';
-import NabBar from './B-Flow/NavBar/navBar.js';
-import LogIn from './B-Flow/Login/login.js';
+import NavBar from './B-Flow/NavBar/navBar.js';
+import LogIn from './B-Flow/Login/Login.js';
 import Orders from './B-Flow/Orders/orders.js';
 import Returns from './B-Flow/Orders/returns.js';
 import Exchange from './B-Flow/Orders/exchange.js';
 import CreateOrder from './B-Flow/Orders/createOrder.js';
 import Settings from './B-Flow/Account/setting.js';
+import OrderStatus from "./B-Flow/Account/orderStatus";
 import BillingDetails from './B-Flow/Account/billingDetail.js';
-import Support from './B-Flow/Account/support.js';
 import { LogOut } from './B-Flow/Account/logOut.js';
 import Tracking from './B-Flow/Tracking/tracking.js';
 import Analytics from './B-Flow/Analytics/analytics.js';
@@ -43,15 +43,15 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/cambioDevolucion" component={CambioDevolucion} />
             <Route exact path="/registrarse" component={SignUp} />
-            <Route exact path="/navbar" component={NabBar} />
+            <Route exact path="/navbar" component={NavBar} />
             <Route exact path="/login" component={LogIn} />
             <Route exact path="/navbar/orders" component={Orders} />
             <Route exact path="/navbar/returns" component={Returns} />
             <Route exact path="/navbar/exchange" component={Exchange} />
             <Route exact path="/navbar/createorder" component={CreateOrder} />
             <Route exact path="/navbar/settings" component={Settings} />
+            <Route exact path="/navbar/settings/orderStatus" component={OrderStatus}/>
             <Route exact path="/navbar/billingdetails" component={BillingDetails} />
-            <Route exact path="/navbar/support" component={Support} />
             <Route exact path="/navbar/logout" component={LogOut} />
             <Route exact path="/navbar/tracking" component={Tracking} />
             <Route exact path="/navbar/analytics" component={Analytics} />

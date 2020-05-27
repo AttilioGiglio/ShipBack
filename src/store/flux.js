@@ -12,46 +12,37 @@ const getState = ({ getStore, getActions, setStore }) => {
             password:"",
             idUsuario:null,
             allUsers:{},
-            // variables del producto
+            //Billing Details
+            cardNumber:0,
+            cvv:0,
+            month: new Date(),
+            year: new Date(),
+            //Settings
+            storeName:"",
+            contactName:"",
+            companyName:"",
+            contactPhone:0,
+            industry:0,
+            emailContact:"",
+            address:"",
+            city:"",
+            // variables del pedido
             pedidos:[],
             numeroPedido:null,
             idPedido:null,
             descripcionPedido:{},
-            productos:{}
+            //variables del producto
+            productos:{},
+            idProducto:0,
+            nombreProducto:"",
+            descripcionProducto:""
           
 
 
 
     },
+
     actions: {
-
-      login: async(params) => {
-        console.log(params)
-        if(params!==undefined && params.name!== "" && params.lastname!=="" && params.password!==""){
-          const user = {
-          name : params.name,
-          lastname: params.lastname,
-          email : params.email,
-          password : params.password
-          }
-          setStore({
-            allUsers : user
-          })
-          localStorage.setItem("user",JSON.stringify(user))
-        }
-      },
-
-
-
-      revalidateUser: (user) => {
-        if (user !== undefined) {
-          setStore({
-            allUsers: user
-          });
-        }
-      },
-
-
 
       createUser: (history) => {
         const store= getStore();
@@ -91,6 +82,13 @@ const getState = ({ getStore, getActions, setStore }) => {
           history.push("/users")
         })
       },
+
+      
+      handleChange: e => {
+        setStore({
+            [e.target.name]: e.target.value
+        })
+    },
 
 
       listarProductos: () => {

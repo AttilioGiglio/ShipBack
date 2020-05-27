@@ -53,7 +53,7 @@ class NavBar extends Component {
                                 <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Account
                             </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown" aria-labelledby="navbarDropdown">
                                     <Link to="/navbar/settings">
                                         <a class="dropdown-item" href="#">Settings</a>
                                     </Link>
