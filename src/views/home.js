@@ -15,7 +15,7 @@ const Home = () => {
                     </li>
 
                     <ul class="nav justify-content-end">
-                    <Link className="navbar-brand" to="/petitions_1">  <li class="nav-item">
+                    <Link  to="/petitions_1">  <li class="nav-item">
                                 <a class="nav-link" href="#">Clientes</a> 
                              </li>
                     </Link>
@@ -25,11 +25,11 @@ const Home = () => {
                     <li class="nav-item">
                         <a class="nav-link" href="#">¿Que hacemos?</a>
                     </li>
-                    <Link className="navbar-brand" to="/registrarse"><li class="nav-item">
+                    <Link to="/registrarse"><li class="nav-item">
                         <a class="nav-link" href="#">Sign In</a>
                     </li>
                     </Link>
-                    <Link className="navbar-brand" to="login"><li class="nav-item">
+                    <Link to="login"><li class="nav-item">
                         <a class="nav-link" href="#">Log In</a>
                     </li>
                     </Link>

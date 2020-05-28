@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import injectContext from "./store/AppContext";
+import injectContext from "./store/appContext";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from "./views/home";
 import SignUp from './B-Flow/SignUp/signUp';
@@ -12,7 +12,10 @@ import Exchange from './B-Flow/Orders/exchange.js';
 import CreateOrder from './B-Flow/Orders/createOrder.js';
 import Settings from './B-Flow/Account/setting.js';
 import OrderStatus from "./B-Flow/Account/orderStatus";
+import ProfileUser from "./B-Flow/Account/profileUser";
+import Users from "./B-Flow/Account/users";
 import BillingDetails from './B-Flow/Account/billingDetail.js';
+import Invoices from "./B-Flow/Account/invoices"
 import { LogOut } from './B-Flow/Account/logOut.js';
 import Tracking from './B-Flow/Tracking/tracking.js';
 import Analytics from './B-Flow/Analytics/analytics.js';
@@ -51,7 +54,10 @@ class App extends Component {
             <Route exact path="/navbar/createorder" component={CreateOrder} />
             <Route exact path="/navbar/settings" component={Settings} />
             <Route exact path="/navbar/settings/orderStatus" component={OrderStatus}/>
+            <Route exact path="/navbar/settings/profileUser" component={ProfileUser}/>
+            <Route exact path="/navbar/settings/users" component={Users}/>
             <Route exact path="/navbar/billingdetails" component={BillingDetails} />
+            <Route exact path="/navbar/billingdetails/invoices" component={Invoices}/>
             <Route exact path="/navbar/logout" component={LogOut} />
             <Route exact path="/navbar/tracking" component={Tracking} />
             <Route exact path="/navbar/analytics" component={Analytics} />
