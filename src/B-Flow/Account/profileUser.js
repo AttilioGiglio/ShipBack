@@ -1,10 +1,13 @@
-import React from "react";
+import React,{useContext} from "react";
+import {Context} from "../../store/appContext";
 import { Link } from "react-router-dom";
 
 const ProfileUser = () => {
 
+const {store,actions} = useContext(Context);
 
     return (
+   
         <div className="container">
             <div className="row mt-5">
                 <div className="col-3">
@@ -35,43 +38,43 @@ const ProfileUser = () => {
                             <div className="row">
                                 <div className="col">
                                     <label class="form-label">Email</label>
-                                    <input type="text" class="form-control"></input>
+                                    <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col">
                                     <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control"></input>
+                                    <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col">
                                     <label class="form-label">Last Name</label>
-                                    <input type="text" class="form-control"></input>
+                                    <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col">
                                     <label class="form-label">New Password</label>
-                                    <input type="password" class="form-control"></input>
+                                    <input type="password" class="form-control" onChange={e => actions.handleChange(e)}></input>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col">
                                     <label class="form-label">Password Confirmation</label>
-                                    <input type="password" class="form-control"></input>
+                                    <input type="password" class="form-control" onChange={e => actions.handleChange(e)}></input>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col">
                                     <label class="form-label">Current Password</label>
-                                    <input type="password" class="form-control"></input>
+                                    <input type="password" class="form-control" onChange={e => actions.handleChange(e)}></input>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col">
                                     <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control"></input>
+                                    <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
                                 </div>
                             </div>
 
@@ -86,6 +89,7 @@ const ProfileUser = () => {
                 </div>
             </div>
         </div>
+        
     )
 }
 

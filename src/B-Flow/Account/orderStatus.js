@@ -1,8 +1,11 @@
-import React from "react";
+import React,{useContext} from "react";
+import {Context} from "../../store/appContext";
 import {Link} from "react-router-dom";
 
 
 const OrderStatus = () => {
+
+    const {store, actions} = useContext(Context)
 
     return (
         <div className="container">
@@ -37,13 +40,13 @@ const OrderStatus = () => {
                                     <p>Shippit automatically sends delivery progress notifications to your recipients. Progress updates can be sent via email and SMS.</p>
                                     <div className="col-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" onChange={e => actions.handleChange(e)}  value="option1" />
                                         <label class="form-check-label" for="inlineCheckbox1">ON</label>
                                     </div>
                                     </div>
                                     <div className="col-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" onChange={e => actions.handleChange(e)} value="option2" />
                                         <label class="form-check-label" for="inlineCheckbox2">OFF</label>
                                     </div>
                                     </div>
@@ -55,7 +58,7 @@ const OrderStatus = () => {
                                 <div className="row text-center">
                                     <div className="col-3">
                                 <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" onChange={e => actions.handleChange(e)} value="option1" />
                                         <label class="form-check-label" for="inlineCheckbox1">ON</label>
                                     </div>
                                     </div>
