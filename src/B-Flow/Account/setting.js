@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { Context } from "../../store/AppContext.js";
+import { Context } from "../../store/appContext.js";
 import {Link} from "react-router-dom";
 
 
@@ -17,11 +17,14 @@ const Settings = () => {
                         <h3 className="mb-3">Settings</h3>
                         <div className="card">
                             <div className="card-body">
-                                <a className="nav-link" href="#">General</a>
+                          <a className="nav-link" href="#">General</a>
+                       
                                 <br />
-                                <a className="nav-link" href="#">My Profile</a>
+                           <Link to="/navbar/settings/profileUser"><a className="nav-link" href="#">My Profile</a>
+                           </Link>
                                 <br />
-                                <a className="nav-link" href="#">Users</a>
+                            <Link to="/navbar/settings/users"><a className="nav-link" href="#">Users</a>
+                            </Link>
                                 <br />
                          <Link to="/navbar/settings/orderStatus"><a className="nav-link" href="#">Notifications</a>
                             </Link>

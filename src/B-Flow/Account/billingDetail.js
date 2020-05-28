@@ -1,5 +1,6 @@
-import React, {  useContext } from 'react';
-import { Context } from "../../store/AppContext.js";
+import React, { useContext } from 'react';
+import { Context } from "../../store/appContext.js";
+import { Link } from "react-router-dom";
 
 
 const BillingDetails = () => {
@@ -17,7 +18,8 @@ const BillingDetails = () => {
                         <div className="card-body">
                             <a className="nav-link" href="#">Payment Details</a>
                             <br />
-                            <a className="nav-link" href="#">Invoices</a>
+                            <Link to="/navbar/billingDetails/invoices"><a className="nav-link" href="#">Invoices</a>
+                            </Link>
                             <br />
                             <a className="nav-link" href="#">Subscriptions</a>
                         </div>
@@ -29,22 +31,27 @@ const BillingDetails = () => {
                             <h3>Payment Card</h3>
                             <form>
                                 <label for="" class="form-label">Card Number</label>
-                                <input type="text" class="form-control" onChange={e=>actions.handleChange(e)}></input>
+                                <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
                                 <div className="row">
                                     <div className="col-4">
                                         <label for="" class="form-label">CVV</label>
-                                        <input type="text" class="form-control" onChange={e=>actions.handleChange(e)}></input>
+                                        <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
 
                                     </div>
                                     <div className="col-4">
                                         <label for="" class="form-label">Month</label>
-                                        <input type="text" class="form-control" onChange={e=>actions.handleChange(e)}></input>
+                                        <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
 
                                     </div>
                                     <div className="col-4">
                                         <label for="" class="form-label">Year</label>
-                                        <input type="text" class="form-control" onChange={e=>actions.handleChange(e)}></input>
+                                        <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
 
+                                    </div>
+                                </div>
+                                <div className="row mt-4 justify-content-center">
+                                    <div className="col-5">
+                                        <button type="button" class="btn btn-primary">Update</button>
                                     </div>
                                 </div>
                             </form>
