@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useContext} from "react";
+import { Context } from "../../store/appContext.js";
 import {Link} from "react-router-dom"
 
 
 const Users = () => {
 
+    const {store, actions} = useContext(Context)
 
     return (
         <div className="container mt-5">
@@ -36,34 +38,34 @@ const Users = () => {
                                 <div className="row">
                                     <div className="col-4">
                                         <label class="form-label">Email</label>
-                                        <input type="email" class="form-control"></input>
+                                        <input type="email" class="form-control" onChange={e =>actions.handleChange(e)}></input>
                                     </div>
 
                                     <div className="col-4">
                                         <label class="form-label">Movil</label>
-                                        <input type="text" class="form-control"></input>
+                                        <input type="text" class="form-control" onChange={e =>actions.handleChange(e)}></input>
                                     </div>
                                 </div>
 
                                 <div className="row">
                                     <div className="col-4">
                                     <label class="form-label">First Name</label>
-                                        <input type="text" class="form-control"></input>
+                                        <input type="text" class="form-control" onChange={e =>actions.handleChange(e)}></input>
                                     </div>
                                     <div className="col-4">
                                     <label class="form-label">Last Name</label>
-                                        <input type="text" class="form-control"></input>
+                                        <input type="text" class="form-control" onChange={e =>actions.handleChange(e)}></input>
                                     </div>
                                 </div>
 
                                 <div className="row">
                                     <div className="col-4">
                                     <label class="form-label">Password</label>
-                                        <input type="password" class="form-control"></input>
+                                        <input type="password" class="form-control" onChange={e =>actions.handleChange(e)}></input>
                                     </div>
                                     <div className="col-4">
                                     <label class="form-label">Confirm Password</label>
-                                        <input type="text" class="form-control"></input>
+                                        <input type="text" class="form-control" onChange={e =>actions.handleChange(e)}></input>
                                     </div>
                                 </div>
 

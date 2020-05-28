@@ -104,6 +104,12 @@ const Settings = () => {
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div className="row justify-content-center">
+                                        <div className="col-5">
+                                            <button type="button" class="btn btn-primary">+Add Location</button>
+                                        </div>
+                                    </div>
                                   
 
                                    </form>
