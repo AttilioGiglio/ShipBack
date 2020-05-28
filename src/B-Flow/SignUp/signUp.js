@@ -110,7 +110,7 @@ import FireBase from "../../FireBase/fireBase.js"
                                             class="form-control" />
                                     </div>
                                 </div>
-
+                                    <br/>
 
                                 <Link className="navbar brand" to="login"> <button type="submit" class="btn btn-dark btn-lg btn-block">
                                     Sign In
