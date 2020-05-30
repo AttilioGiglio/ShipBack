@@ -28,7 +28,12 @@ const Settings = () => {
                                 <br />
                          <Link to="/navbar/settings/orderStatus"><a className="nav-link" href="#">Notifications</a>
                             </Link>
+                            <br/>
+                        <Link to="/navbar/settings/carriers"><a className="nav-link" href="#">Carriers</a>
+                        </Link>
+        
                             </div>
+                           
 
                            
                         </div>
