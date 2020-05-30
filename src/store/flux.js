@@ -12,11 +12,21 @@ const getState = ({ getStore, getActions, setStore }) => {
             password:"",
             idUsuario:null,
             allUsers:{},
+        
             //Billing Details
             cardNumber:0,
             cvv:0,
             month: new Date(),
             year: new Date(),
+            //invoices
+            invoices:{},
+            invoice_id:0,
+            invoiceDate: new Date(),
+            invoiceStatus:false,
+            invoiceService:"",
+            invoiceAmount:0,
+            
+
             //Settings
             storeName:"",
             contactName:"",
@@ -35,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             productos:{},
             idProducto:0,
             nombreProducto:"",
-            descripcionProducto:""
+            descripcionProducto:{}
           
 
 
@@ -90,6 +100,26 @@ const getState = ({ getStore, getActions, setStore }) => {
         })
     },
 
+    listarPedidos: () =>{
+      const store = getStore();
+      fetch(store.path + "/api/data_pedidos",{
+        method : "GET",
+        headers: {
+          "Content Type": "application/json"
+        }
+      })
+      .then(function(response){
+        if(response.ok)
+        return response.json();
+      })
+      .then(function(data){
+        console.log(data)
+        setStore({
+          pedidos : data
+        })
+      })
+    },
+
 
       listarProductos: () => {
         const store = getStore();
@@ -120,6 +150,15 @@ const getState = ({ getStore, getActions, setStore }) => {
           nombreProducto : producto.nombre,
           precioProducto: producto.precio,
           descripcionProducto: producto.descripcionProducto
+        })
+      },
+
+      seleccionarPedido: (pedido) => {
+        console.log(pedido)
+        setStore({
+          id: pedido.idPedido,
+          numeroPedido: pedido.numeroPedido,
+          descripcionPedido: pedido.descripcionPedido
         })
       },
 
