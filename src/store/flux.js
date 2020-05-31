@@ -132,7 +132,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         idUsuario:null
         })
         getActions().listarUsuarios();
-       // history.push("/users")
+      //history.push("/users")
       })
 
     },

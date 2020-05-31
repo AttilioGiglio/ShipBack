@@ -59,7 +59,7 @@ const {store,actions} = useContext(Context);
                             <div className="row">
                                 <div className="col">
                                     <label class="form-label">New Password</label>
-                                    <input type="password" class="form-control" value={store.password}onChange={e => actions.handleChange(e)}></input>
+                                    <input type="password" class="form-control" value={store.password} onChange={e => actions.handleChange(e)}></input>
                                 </div>
                             </div>
                             <div className="row">

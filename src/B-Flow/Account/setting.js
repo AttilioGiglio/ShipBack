@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 
 
-const Settings = () => {
+const Settings = (props) => {
 
 
     const { store, actions } = useContext(Context);
@@ -97,6 +97,7 @@ const Settings = () => {
                                     <div className="col-3">
                                         <input type="text"
                                          class="form-control"
+                                         value={store.industry}
                                         onChange={e=> actions.handleChange(e)}/>
                                     </div>
                                     <div className="col-3">
@@ -105,6 +106,7 @@ const Settings = () => {
                                     <div className="col-3">
                                         <input type="text"
                                          class="form-control"
+                                         value={store.email}
                                         onChange={e=> actions.handleChange(e)}></input>
                                     </div>
                                     </div> 
@@ -135,7 +137,7 @@ const Settings = () => {
 
                                     <div className="row justify-content-center">
                                         <div className="col-5">
-                                            <button type="button" class="btn btn-primary">+Add Location</button>
+                                            <button type="button" class="btn btn-primary" onClick={e => actions.createStoreDetails(props.history)}>+Add Location</button>
                                         </div>
                                     </div>
                                   
