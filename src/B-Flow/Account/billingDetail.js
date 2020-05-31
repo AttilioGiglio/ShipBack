@@ -31,21 +31,21 @@ const BillingDetails = () => {
                             <h3>Payment Card</h3>
                             <form>
                                 <label for="" class="form-label">Card Number</label>
-                                <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
+                                <input type="text" class="form-control" value={store.cardNumber} onChange={e => actions.handleChange(e)}></input>
                                 <div className="row">
                                     <div className="col-4">
                                         <label for="" class="form-label">CVV</label>
-                                        <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
+                                        <input type="text" class="form-control" value={store.cvv} onChange={e => actions.handleChange(e)}></input>
 
                                     </div>
                                     <div className="col-4">
                                         <label for="" class="form-label">Month</label>
-                                        <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
+                                        <input type="text" class="form-control" value={store.date} onChange={e => actions.handleChange(e)}></input>
 
                                     </div>
                                     <div className="col-4">
                                         <label for="" class="form-label">Year</label>
-                                        <input type="text" class="form-control" onChange={e => actions.handleChange(e)}></input>
+                                        <input type="text" class="form-control" value={store.year} onChange={e => actions.handleChange(e)}></input>
 
                                     </div>
                                 </div>

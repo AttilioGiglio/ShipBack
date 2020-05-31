@@ -26,6 +26,9 @@ const OrderStatus = () => {
                          </Link>
                             <br />
                             <a className="nav-link" href="#">Notifications</a>
+                            <br/>
+                            <Link to="/navbar/settings/carriers"><a className="nav-link" href="#">Carriers</a>
+                            </Link>
                         </div>
                     </div>
 
@@ -119,6 +122,11 @@ const OrderStatus = () => {
                                     
                                 </div>
 
+                                <div className="row mt-4">
+                                    <div class="col-4">
+                                    <button type="button" class="btn btn-primary">Update</button>
+                                </div>
+                                </div>
 
 
                                
