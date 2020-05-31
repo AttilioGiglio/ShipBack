@@ -17,7 +17,7 @@ import Users from "./B-Flow/Account/users";
 import Carriers from "./B-Flow/Account/carriers";
 import BillingDetails from './B-Flow/Account/billingDetail.js';
 import Invoices from "./B-Flow/Account/invoices"
-import { LogOut } from './B-Flow/Account/logOut.js';
+import  LogOut  from './B-Flow/Account/logOut';
 import Tracking from './B-Flow/Tracking/tracking.js';
 import Analytics from './B-Flow/Analytics/analytics.js';
 import CambioDevolucion from "./views/cambioDevolucion";

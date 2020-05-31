@@ -16,10 +16,10 @@ const getState = ({ getStore, getActions, setStore }) => {
             allUsers:{},
         
             //Billing Details
-            cardNumber:0,
-            cvv:0,
-            month: new Date(),
-            year: new Date(),
+            cardNumber:null,
+            cvv:null,
+            month: null,
+            year: null,
 
             //invoices
             invoices:{},
@@ -70,7 +70,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           lastname: store.lastname,
           email: store.email,
           password: store.password,
-          id : store.idUsuario
+      //???    id : store.idUsuario
         }
 
         fetch(store.path + "/api/registrarse",{
@@ -92,7 +92,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             lastname:"",
             email:"",
             password:"",
-            idUsuario:null
+        //????    idUsuario:null
 
           });
           history.push("/users")
@@ -108,7 +108,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           password : store.password,
           confirmPassword: store.confirmPassword,
           currentPassword: store.currentPassword,
-          idUsuario: store.idUsuario
+         //??? idUsuario: store.idUsuario
       }
       fetch(store.path + "/api/edit_user/" + store.id, {
         method: "PUT",
@@ -129,12 +129,43 @@ const getState = ({ getStore, getActions, setStore }) => {
         password:"",
         confirmPassword:"",
         currentPassword:"",
-        idUsuario:null
+       //??? idUsuario:null
         })
         getActions().listarUsuarios();
       //history.push("/users")
       })
 
+    },
+
+    createBillingDetails: () => {
+      const store= getStore();
+      const data = {
+        cardNumber: store.cardNumber,
+        cvv: store.cvv,
+        month: store.month,
+        year: store.year
+      }
+      fetch(store.path + "/billingDetails",{
+        method: "POST",
+        body: JSON.stringify(data),
+        headers : {
+          "Content Type": "application/json"
+        }
+      })
+      .then(function(response){
+        if(response.ok)
+        return response.json();
+      })
+      .then(function(data){
+        console.log(data);
+        setStore({
+          cardNumber:null,
+          cvv:null,
+          month:null,
+          year:null
+        })
+        //history.push("/billingDetails")
+      })
     },
 
 

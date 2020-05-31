@@ -63,7 +63,7 @@ class NavBar extends Component {
                                     <Link to="/navbar/support">
                                         <a class="dropdown-item" href="#">Support</a>
                                     </Link>
-                                    <Link to="/navbar/logout">
+                                    <Link to="/">
                                         <a class="dropdown-item" href="#">Logout</a>
                                     </Link>
                                 </div>
