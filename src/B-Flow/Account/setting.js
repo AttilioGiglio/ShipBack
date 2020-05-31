@@ -47,16 +47,25 @@ const Settings = () => {
                                    <h3 className="text-center mb-4">Sender Details</h3>
                                     <div className="row">
                                     <div className="col-3">
-                                        <label for="" class="form-label">Store Name</label>
+                                        <label for=""
+                                         class="form-label">
+                                    Store Name</label>
                                     </div>
                                     <div className="col-3">
-                                        <input type="text" class="form-control" onChange={e=> actions.handleChange(e)}/>
+                                        <input type="text"
+                                         class="form-control"
+                                         value={store.storeName}
+                                        onChange={e=> actions.handleChange(e)}/>
                                     </div>
                                     <div className="col-3">
-                                        <label for="" class="form-label">Contact Name</label>
+                                        <label for="" class="form-label">
+                                        Contact Name</label>
                                     </div>
                                     <div className="col-3">
-                                        <input type="text" class="form-control"  onChange={e=> actions.handleChange(e)}></input>
+                                        <input type="text"
+                                        value={store.contactName}
+                                         class="form-control"
+                                        onChange={e=> actions.handleChange(e)}></input>
                                     </div>
                                     </div>
 
@@ -65,13 +74,19 @@ const Settings = () => {
                                         <label for="" class="form-label">Company Name</label>
                                     </div>
                                     <div className="col-3">
-                                        <input type="text" class="form-control" onChange={e=> actions.handleChange(e)}/>
+                                        <input type="text"
+                                         class="form-control"
+                                         value={store.companyName}
+                                          onChange={e=> actions.handleChange(e)}/>
                                     </div>
                                     <div className="col-3">
                                         <label for="" class="form-label">Contact Phone</label>
                                     </div>
                                     <div className="col-3">
-                                        <input type="text" class="form-control" onChange={e=> actions.handleChange(e)}></input>
+                                        <input type="text"
+                                         class="form-control"
+                                         value={store.contactPhone}
+                                          onChange={e=> actions.handleChange(e)}></input>
                                     </div>
                                     </div> 
 
@@ -80,13 +95,17 @@ const Settings = () => {
                                         <label for="" class="form-label">Industry</label>
                                     </div>
                                     <div className="col-3">
-                                        <input type="text" class="form-control" onChange={e=> actions.handleChange(e)}/>
+                                        <input type="text"
+                                         class="form-control"
+                                        onChange={e=> actions.handleChange(e)}/>
                                     </div>
                                     <div className="col-3">
                                         <label for="" class="form-label">Email Contact</label>
                                     </div>
                                     <div className="col-3">
-                                        <input type="text" class="form-control" onChange={e=> actions.handleChange(e)}></input>
+                                        <input type="text"
+                                         class="form-control"
+                                        onChange={e=> actions.handleChange(e)}></input>
                                     </div>
                                     </div> 
 
@@ -98,14 +117,18 @@ const Settings = () => {
                                         <div className="col-6">
                                             <div className="form-group">
                                             <label for="" class="form-label">Address</label>
-                                            <input type="text" class="form-control"onChange={e=> actions.handleChange(e)}></input>
+                                            <input type="text"
+                                             class="form-control"
+                                             onChange={e=> actions.handleChange(e)}></input>
                                             </div>
                                         </div>
 
                                        <div className="col-6">
                                             <div className="form-group">
                                             <label for="" class="form-label">City</label>
-                                            <input type="text" class="form-control" onChange={e=> actions.handleChange(e)}></input>
+                                            <input type="text"
+                                             class="form-control"
+                                            onChange={e=> actions.handleChange(e)}></input>
                                             </div>
                                         </div>
                                     </div>
