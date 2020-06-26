@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext} from 'react';
 import { Context } from "../../store/AppContext.js";
 import { Link } from "react-router-dom";
 import './account.css';
@@ -53,9 +53,6 @@ const Settings = (props) => {
                         <div className="card">
                             <div className="card-body">
                                 <Link to="/settings"><a className="nav-link">General</a>
-                                </Link>
-                                <hr />
-                                <Link to="/navbar/settings/profileUser"><a className="nav-link">My Profile</a>
                                 </Link>
                                 <hr />
                                 <Link to="/navbar/settings/users"><a className="nav-link">Users</a>

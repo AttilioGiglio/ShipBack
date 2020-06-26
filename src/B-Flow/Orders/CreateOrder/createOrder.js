@@ -28,6 +28,10 @@ const CreateOrder = (props) => {
         //     return;
         // }
    
+
+        // 
+
+        
         fetch(urlapi + '/posts', {
             method: 'POST',
             body: JSON.stringify(state)
@@ -82,12 +86,20 @@ const CreateOrder = (props) => {
                                     </div>
 
                                     <div className="row">
-                                        <div className="col">
-                                            <label for="" class="form-label">ID Factura</label>
+                                    <div className="col">
+                                            <label for="" class="form-label">Fecha</label>
+                                            <input type="text" required name="orderNumber" onChange={handleChange} class="form-control"></input>
+                                    </div>
+                                    <div className="col">
+                                            <label for="" class="form-label">ID usuario</label>
                                             <input type="text" required name="recipient" onChange={handleChange} class="form-control"></input>
                                         </div>
                                         <div className="col">
                                             <label for="" class="form-label">ID Despacho</label>
+                                            <input type="text" required name="recipient" onChange={handleChange} class="form-control"></input>
+                                        </div>
+                                        <div className="col">
+                                            <label for="" class="form-label">ID Factura</label>
                                             <input type="email" required name="email" onChange={handleChange} class="form-control"></input>
                                         </div>
                                     </div>
@@ -95,15 +107,15 @@ const CreateOrder = (props) => {
                                     <div className="row">
                                         <div className="col">
                                             <label for="" class="form-label">Productos</label>
-                                            <input type="text" required name="orderNumber"class="form-control"></input>
+                                            <input type="text" required name="phone" onChange={handleChange} class="form-control"></input>
                                         </div>
                                         <div className="col">
-                                            <label for="" class="form-label">Correo</label>
-                                            <input type="text" required name="phone" class="form-control"></input>
+                                            <label for="" class="form-label">Courrier</label>
+                                            <input type="text" required name="phone" onChange={handleChange} class="form-control"></input>
                                         </div>
                                         <div className="col">
-                                            <label for="" class="form-label">Celular</label>
-                                            <input type="text" required name="phone" class="form-control"></input>
+                                            <label for="" class="form-label">Precio</label>
+                                            <input type="text" required name="phone" onChange={handleChange} class="form-control"></input>
                                         </div>
                                     </div>
                                     <div className="row justify-content-center pt-4">
